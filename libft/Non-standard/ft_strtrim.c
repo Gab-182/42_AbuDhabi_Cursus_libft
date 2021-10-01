@@ -22,6 +22,10 @@ char	*ft_strtrim(char const *s1, char const *set)
 	n = 0;
 	j = 0;
 	i = 0;
+	if (!s1 || !set || !new_str)
+	{
+		return (NULL);
+	}
 	while (set[i] != '\0' && n < strlen(s1) - 1)
 	{
 		if (s1[0] == set[i])
