@@ -29,7 +29,7 @@ void *ft_calloc(size_t nmemb, size_t size)
 	/*
 	 * If (nmemb) or (size) is 0, then calloc() returns NULL.
 	 */
-	if (! nmemb || ! size)
+	if (! nmemb || ! size || ! ptr)
 	{
 		return (NULL);
 	}

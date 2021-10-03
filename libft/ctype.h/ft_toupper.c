@@ -16,5 +16,8 @@ int	ft_toupper(int n)
 	{
 		return (n - 32);
 	}
-	return (0);
+	else
+	{
+		return (n);
+	}
 }

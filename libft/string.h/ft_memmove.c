@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/23 01:35:41 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/09/23 09:06:17 by gabdoush         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
@@ -19,7 +7,7 @@
  *====
  * memcpy():
  * ----------
- * is is used to copy a specified number of bytes from one memory to another.
+ * is used to copy a specified number of bytes from one memory to another.
  *
  * memmove():
  * ----------
@@ -37,12 +25,15 @@
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	size_t i;
-
-	i = 0;
-
 	unsigned char *temp;
 	unsigned char new_char[len];
+
 	temp = &new_char[len];
+	i = 0;
+	if (!dst && !src)
+	{
+		return (0);
+	}
 	while (i < len)
 	{
 		temp[i] = ((unsigned char *)src)[i];

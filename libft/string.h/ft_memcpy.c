@@ -1,15 +1,3 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 22:16:24 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/09/23 08:09:46 by gabdoush         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 # include <stdio.h>
 # include <stdlib.h>
 # include <string.h>
@@ -24,7 +12,6 @@ void	*ft_memcpy(void *dst, const void *src, size_t len)
 		return (NULL);
 	}
 
-	// Need explanations Here???? WHY?
 
 	i = 0;
 	while (i < len)
