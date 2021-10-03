@@ -1,26 +1,32 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 20:46:02 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/09/21 20:46:05 by gabdoush         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+/*
+ * SYNOPSIS: #include <string.h>
+ *
+ * The strchr() function locates the first occurrence of c (converted to a char)
+ * in the string pointed to by s.
+ * 
+ * Return value:
+ * =============
+ * return a pointer to the located character, or NULL if the character does 
+ * not appear in the string.
+ */
 
 # include <stdio.h>
+# include <string.h>
 
 char	*ft_strchr(const char *s, int c)
 {
-	while (*s != '\0')
+	int	n;
+
+	n = strlen(s);
+	while (n >= 0)
 	{
-		if (*s == c)
+		if (*s == (char)c)
 		{
-			return (char *)s;
+			// cause the string is const char we need to convert it.
+			return ((char *)s);
 		}
 		s++;
+		n--;
 	}
 	return (0);
 }
@@ -28,6 +34,13 @@ char	*ft_strchr(const char *s, int c)
 int	main()
 {
 	char string[] = "Ghaiath Antoun Abdoush";
-	printf("%s\n", ft_strchr(string, 'A'));
+	printf("%s\n", ft_strchr(string, 'h'));
 	return (0);
 }
+
+/*
+ * Note
+ * =====
+ * Don't forget to replace strlen(s) with ft_strlen, and include 
+ * the header libft.h
+ */
