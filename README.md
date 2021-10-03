@@ -8,6 +8,10 @@
   Functions from /libft.h/ library 
 </h3>
 
+<h3 align="center"> 
+  Still under construction
+</h3>
+
 <h5 align="center">
 
 | [`ft_isascii`](libft/ctype.h/ft_isascii.c)    | [`ft_sqrt`](libft/math.h/ft_sqrt.c)                             | [`ft_strlcat`](libft/string.h/ft_strlcat.c)                 | [`ft_strlcpy`](libft/string.h/ft_strlcpy.c)                 |
@@ -33,5 +37,6 @@
 </h5>
   
 ### *Note*:
+> - **NOT COMPLETED YET!!**
 > - **NOT** all the functions are required to finish the [libft] project.
 > - each functions has its own describtion within the code.
