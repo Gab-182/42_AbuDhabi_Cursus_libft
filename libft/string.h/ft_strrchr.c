@@ -11,24 +11,21 @@
 /* ************************************************************************** */
 
 # include <stdio.h>
-
-
+# include <string.h>
 
 char    *ft_strrchr(const char *s, int c)
 {
 
-    while (*s != '\0')
+    int n;
+
+    n = strlen(s);
+    while (n >= 0)
     {
-        s++;
-    }
-    s--;
-    while (*s)
-    {
-        if (*s == c)
+        if (s[n] == (char)c)
         {
-            return (char *)s;
+            return ((char *)&s[n]);
         }
-        s--;
+        n--;
     }
     return (0);
 }
@@ -36,7 +33,7 @@ char    *ft_strrchr(const char *s, int c)
 int     main()
 {
     char string[] = "Ghaiath Antoun Abdoush";
-    printf("%s\n", ft_strrchr(string, 'A'));
+    printf("%s\n", ft_strrchr(string, 'a'));
 
     return (0);
 }
