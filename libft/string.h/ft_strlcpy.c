@@ -26,29 +26,39 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	size_t i;
 
 	i = 0;
-	// The src should be NUL-terminated.
-	if (src != NULL && size > 0)
+	// If the src is not NUL-terminated, (return NULL).
+	if (!src)
 	{
-		//(size - 1):
-		//cause the function takes the full size of the buffer(size),
-		//and that is mean with '\0'.
-		//so by writeing size-1 we are comparing just the length.
-		while (i < size - 1 && src[i] != '\0')
+		return (0);
+	}
+	/* 
+	 * check if the size of the destination contain at least
+	 * one byte to terminate the result.
+	 */
+	if (size > 0)
+	{
+		/*
+		 * (size - 1):
+		 * cause the function takes the full size of the buffer(size),
+		 * and that is mean with '\0'.
+		 * so by writeing size-1 we are comparing just the length.
+		 */
+		  while (i < size - 1 && src[i] != '\0')
 		{
 			dst[i] = src[i];
 			i++;
 		}
 		// We should now terminate the dst string.
 		dst[i] = '\0';
-		//According to the man page:
-		//==========================
-		// The strlcpy() and strlcat() functions return the total 
-		// length of the string they tried to create.  
-		// For strlcpy() that means the length of src
-		return (strlen(src));
-
 	}
-	return (0);
+		/*
+		 * According to the man page:
+		 * ==========================
+		 * The strlcpy() and strlcat() functions return the total 
+		 * length of the string they tried to create.  
+		 * For strlcpy() that means the length of src
+		 */
+		return (strlen(src));
 }
 
 
