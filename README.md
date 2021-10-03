@@ -37,6 +37,7 @@
 </h5>
   
 ### *Note*:
+> - **The project has not yet been submitted and has not been verified by the Moulinette and the Norminette.**
 > - **NOT COMPLETED YET!!**
 > - **NOT** all the functions are required to finish the [libft] project.
 > - each functions has its own describtion within the code.
