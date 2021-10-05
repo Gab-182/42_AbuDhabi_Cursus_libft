@@ -31,12 +31,19 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 	src_char = (unsigned char *)src;
 	i = 0;
 
-	if (!dst && !src)
+	if (!dst || !src)
 	{
 		return (0);
 	}
-	// check if the two strings overlabing.
-	if (dst > src)
+
+	/*
+	 * Check if the two strings overlabing.
+	 * ======================================
+	 * If two strings end at the same place they by definition overlapped
+	 * they share the same null terminator. Either both strings are identical
+	 * or one is a substring of the other.
+	 */
+	if (dst_char > src_char)
 	{
 		while (i < len)
 		{
@@ -44,7 +51,7 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 			 * Here we start coping from the last element of the string (src)
 			 * to the first one.
 			 */
-			dst_char[len - 1 - i] = src_char[len - 1 - i];
+			dst_char[len -1 - i] = src_char[len - 1 - i];
 			i++;
 		}
 	}
@@ -55,32 +62,35 @@ void *ft_memmove(void *dst, const void *src, size_t len)
 	return (dst_char);
 }
 
+
 int main()
 {
 	// 1:
-	char dest[] = "old_string";
-	const char src[] = "new_string";
+	char dest[] = "string";
+	const char src[] = "new....string";
 	printf("Before memmove:\ndest = %s, src = %s\n", dest, src);
-	memmove(dest, src, 9);
+	memmove(dest, src, 4);
 	printf("After memmove\ndest = %s, src = %s\n\n", dest, src);
 
-	char dest1[] = "old_string";
-	const char src1[] = "new_string";
+	char dest1[] = "string";
+	const char src1[] = "new....string";
 	printf("Before ft_memmove\ndest = %s, src = %s\n", dest1, src1);
-	ft_memmove(dest1, src1, 9);
+	ft_memmove(dest1, src1, 4);
 	printf("After ft_memmove\ndest = %s, src = %s\n\n\n", dest1, src1);
 
 	// 2:
-	char dst2[] = "Ghaiath";
-	char src2[] = ".......";
-	size_t len = 4;
+	
+	char src2[] = "lorem ipsum dolor sit amet";
+	char *dst2 = src2 + 1;
+	size_t len = 5;
 	printf("Befor memmove() : %s\n", dst2);
 	memmove(dst2, src2, len);
 	printf("After memmove() : %s\n\n", dst2);
 
-	char dst3[] = "Ghaiath";
-	char src3[] = ".......";
-	size_t len1 = 4;
+	
+	char src3[] = "lorem ipsum dolor sit amet";
+	char *dst3 = src3 + 1;
+	size_t len1 = 5;
 	printf("Befor ft_memmove() : %s\n", dst3);
 	memmove(dst3, src3, len1);
 	printf("After ft_memmove() : %s\n", dst3);
@@ -88,19 +98,24 @@ int main()
 	return EXIT_SUCCESS;
 }
 
-/*NOTE:
+/*NOTES:
  *=====
- * Don't forget to replace memcpy with ft_memcpy() ,and #include libft.h
+ * Don't forget to replace memcpy, strlen() with:
+ * ft_memcpy(), ft_strlen() ,and also #include "libft.h"
  * 
  * It will be alot easier to create a *temp pointer, but using malloc()
  * is forbiden here.
  * 
- * Very useful link to understand the defference:
- * ================================================
+ * Very useful links that helped me to understand memmove() :
+ * ==========================================================
  * 
  * https://www.geeksforgeeks.org/memmove-in-cc/  
- *
  * https://www.geeksforgeeks.org/write-memcpy/ 
- * 
  * https://aticleworld.com/memmove-function-implementation-in-c/
+ * https://stackoverflow.com/questions/4023320/how-to-implement-memmove-in-standard-c-without-an-intermediate-copy?answertab=votes#tab-top
+ * 
+ * very useful link to understand overlabbing:
+ * ===========================================
+ * 
+ * https://stackoverflow.com/questions/17559977/is-this-a-correct-and-portable-way-of-checking-if-2-c-strings-overlap-in-memory
  */
