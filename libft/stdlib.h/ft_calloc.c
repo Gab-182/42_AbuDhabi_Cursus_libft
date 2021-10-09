@@ -4,8 +4,8 @@
  *
  * Describtion:
  * ------------
- * The calloc() function allocates memory for an array of (nmemb) elements of 
- * (size) bytes each and returns a pointer to the allocated memory.
+ * The calloc() function allocates memory for an array of (nmemb) elements 
+ * of (size) bytes each and returns a pointer to the allocated memory.
  * The memory is set to zero.
  * Block of memory would be allocated: malloc(nmemb * size);
  * If (nmemb) or (size) is 0, then calloc() returns NULL.
@@ -21,7 +21,7 @@ void *ft_calloc(size_t nmemb, size_t size)
 
 	/*
 	 * (char *): cause malloc() will give us a void type result, but the
-	 * ptr pointer ic a char type pointer, that is why we needed that 
+	 * ptr pointer is a char type pointer, that is why we needed that 
 	 * conversion.
 	 */
 	ptr = (char *)malloc(nmemb * size);

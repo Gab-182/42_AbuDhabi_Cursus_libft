@@ -1,14 +1,9 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/22 21:02:44 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/09/22 21:02:46 by gabdoush         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+/*
+ * The  bzero(): erases the data in the n bytes of the memory starting at 
+ * the location pointed to by s, by writing zeros (bytes containing '\0') 
+ * to that area.
+ * If (n) is zero, bzero() does nothing.
+ */
 
 # include <stdio.h>
 # include <stdlib.h>
@@ -41,7 +36,7 @@ int	main()
 	memset(ptr2+7, 0, 1);
 	printf("After appling memset: %s\n", ptr2);
 
-	// So it is actually the same of memset function but :
+	// So it is actually the same of memset() function but :
 	// int c = 0;
 	//
 	return EXIT_SUCCESS;
