@@ -45,11 +45,7 @@ t_list  *ft_lstnew(void *content)
 
 
 int main()
-{
-	t_list *new_list;
-	
-	new_list = ft_lstnew("Ghaith");
-
-	printf("%s\n", (char *)(new_list -> content));
+{	
+	printf("%s\n", (char *)(ft_lstnew("Ghaith") -> content));
 	return (0);
 }
