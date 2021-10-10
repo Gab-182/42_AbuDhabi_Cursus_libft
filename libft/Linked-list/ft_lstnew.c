@@ -7,13 +7,21 @@
  * to it, If the memory allocation fails then we will return NULL.
 */
 
+# include <stdio.h>
 # include <string.h>
+# include <stdlib.h>
 
 typedef struct s_list
 {
 	void			*content;
-	struct s_list	*next;
+	struct 	s_list	*next;
 }			t_list;
+
+/***
+ * • content : The data contained in the element. The void * allows to store any kind
+	of data.
+ * • next : The next element’s address or NULL if it’s the last element.
+*/
 
 /*---------------------------------------------------------------*/
 
@@ -33,4 +41,15 @@ t_list  *ft_lstnew(void *content)
 		new_list->next = NULL;
 
 		return (new_list);
+}
+
+
+int main()
+{
+	t_list *new_list;
+	
+	new_list = ft_lstnew("Ghaith");
+
+	printf("%s\n", (char *)(new_list -> content));
+	return (0);
 }
