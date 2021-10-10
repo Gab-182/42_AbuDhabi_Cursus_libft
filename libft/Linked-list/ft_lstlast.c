@@ -1,6 +1,6 @@
-/**
- * Counts the number of elements in a list.
- */
+/*
+ * Returns the last element of the list.
+*/
 
 # include <stdio.h>
 # include <string.h>
@@ -19,18 +19,21 @@ typedef struct s_list
 */
 
 /*--------------------------Required function----------------------------*/
-int ft_lstsize(t_list *lst)
+t_list  *ft_lstlast(t_list *lst)
 {
-    int i;
 
-    i = 0;
-    while (lst)
+    if (!lst)
     {
-        i++;
+        return (NULL);
+    }
+    // While the next element of the struct is not a NULL.
+    while (lst -> next)
+    {
         lst = lst -> next;
     }
-    return (i);
+    return (lst);
 }
+
 /*------------------------------________----------------------------------*/
 /*-----------------------------|Example|----------------------------------*/
 /*
@@ -38,7 +41,7 @@ int ft_lstsize(t_list *lst)
  * 1. Create a new memory for a new struct.
  * 2. Allocate new element to the struct.
  * 3. Add another element to the first location of the struct.
- * 4. Calculate the SIZE of the created struct.
+ * 4. Return the last element of the created struct.
 */
 /*------------------------------------------------------------------------*/
 
@@ -67,11 +70,15 @@ int main()
 {
     t_list *lst;
     t_list *new_lst;
+    t_list *last_element;
 
     lst = ft_lstnew("Abdoush");
     new_lst = ft_lstnew("Ghaith");
     ft_lstadd_front(&lst, new_lst);
     
-	printf("%d\n", ft_lstsize(lst));
+    last_element = ft_lstlast(lst);
+
+	printf("%s\n", (char *)last_element -> content);
 	return (0);
 }
+/*------------------------------------------------------------------------*/

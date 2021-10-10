@@ -23,7 +23,7 @@ typedef struct s_list
  * • next : The next element’s address or NULL if it’s the last element.
 */
 
-/*---------------------------------------------------------------*/
+/*--------------------------Required function----------------------------*/
 
 t_list  *ft_lstnew(void *content)
 {
