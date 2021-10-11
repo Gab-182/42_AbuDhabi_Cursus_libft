@@ -23,29 +23,34 @@ typedef struct s_list
  * • next : The next element’s address or NULL if it’s the last element.
 */
 
-/*---------------------------------------------------------------*/
+/*--------------------------Required function----------------------------*/
 
 void    ft_lstadd_front(t_list **lst, t_list *new)
 {
+        if (!(*lst))
+        {
+            *lst = new;
+        }
         if (new != NULL)
-	    {
+        {
             /*
-             * Make the [(next) element from(new) struct] points to the
-             * first element of the struct (lst). 
-             */
+            * Make the [(next) element from(new) struct] points to the
+            * first element of the struct (lst). 
+            */
             new -> next = *lst;
             /*
-             * THEN, Make the pointer (lst) point to the first element of 
-             * the strust (new),
-             * 
-             * So now the first element from (new) struct, will be 
-             * pointed to by (lst) now.
-             */
+            * THEN, Make the pointer (lst) point to the first element of 
+            * the strust (new),
+            * 
+            * So now the first element from (new) struct, will be 
+            * pointed to by (lst) now.
+            */
             *lst = new;
         }
 }
 
-/*-----------------------------Example-----------------------------------*/
+/*------------------------------________----------------------------------*/
+/*-----------------------------|Example|-----------------------------------*/
 
 t_list  *ft_lstnew(void *content)
 {

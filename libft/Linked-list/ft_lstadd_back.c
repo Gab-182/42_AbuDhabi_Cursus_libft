@@ -56,7 +56,7 @@ void ft_lstadd_back(t_list **lst, t_list *new)
 }
 
 /*------------------------------________----------------------------------*/
-/*-----------------------------|Example|----------------------------------*/
+/*-----------------------------|Example|-----------------------------------*/
 /*
  * In This example:
  * 1. Create a new memory for a new struct.
@@ -65,13 +65,12 @@ void ft_lstadd_back(t_list **lst, t_list *new)
  * 4. Adding the struct (new) the last position of the struct (lst).
 */
 /*------------------------------------------------------------------------*/
-void ft_lstadd_front(t_list **lst, t_list *new)
+void    ft_lstadd_front(t_list **lst, t_list *new)
 {
-    if (new != NULL)
-    {
-        new->next = *lst;
+        if (!(*lst))
+            *lst = new;
+        new -> next = *lst;
         *lst = new;
-    }
 }
 t_list *ft_lstnew(void *content)
 {

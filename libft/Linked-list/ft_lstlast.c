@@ -47,11 +47,10 @@ t_list  *ft_lstlast(t_list *lst)
 
 void    ft_lstadd_front(t_list **lst, t_list *new)
 {
-        if (new != NULL)
-	    {
-            new -> next = *lst;
+        if (!(*lst))
             *lst = new;
-        }
+        new -> next = *lst;
+        *lst = new;
 }
 t_list  *ft_lstnew(void *content)
 {
