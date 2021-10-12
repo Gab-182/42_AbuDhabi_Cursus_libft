@@ -15,12 +15,14 @@
  * 
 */
 
+#include <stdio.h>
+#include <string.h>
 #include <stdlib.h>
 
 typedef struct s_list
 {
-    void *content;
-    struct s_list *next;
+	void *content;
+	struct s_list *next;
 } t_list;
 
 /*------------------------------------------------------------------------*/
@@ -32,12 +34,11 @@ typedef struct s_list
 */
 
 /*--------------------------Required function----------------------------*/
-void ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_list *lst, void (*del)(void*))
 {
-    if (lst != NULL)
-    {
-        del(lst -> content);
-        free(lst);
-    }
-
+		if (lst != NULL)
+		{
+			del(lst -> content);
+			free(lst);
+		}
 }
