@@ -1,0 +1,1 @@
+/home/gab/.vim/vimrc
