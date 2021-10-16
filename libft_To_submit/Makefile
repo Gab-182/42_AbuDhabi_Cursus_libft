@@ -6,7 +6,7 @@
 #    By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/10/03 12:42:29 by gabdoush          #+#    #+#              #
-#    Updated: 2021/10/11 02:26:50 by gabdoush         ###   ########.fr        #
+#    Updated: 2021/10/16 23:05:03 by gabdoush         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -81,16 +81,25 @@ HEADERS = libft.h
 
 FLAGS = -Wall -Werror -Wextra
 
+# (-c) flag : Tells the compiler to get just for the object file stage then stop.
 CC = gcc -c $(FLAGS)
 
+# We use the rule (all: ) when we have more than one target.
 all: $(NAME)
 
+# The objects (ar) command that will create, extract and modify archives.
+# The options (rc) will:
+			# r: insert the files.
+			# c: create the archive.
 $(NAME): $(OBJECTS)
 	ar rc libft.a $(OBJECTS)
 
 bonus: $(BONUS_OBJ)
 	ar -rc $(NAME) $(BONUS_OBJ)
 
+# (clean) will remove .o files.
+# (fclean) will remove .o files and the binary.
+# (re) will do fclean and re-make your binary.
 clean:
 	/bin/rm -f $(OBJECTS) $(BONUS_OBJ)
 
@@ -99,6 +108,12 @@ fclean: clean
 
 re: fclean all
 
+# [%.o: %.c]: means that any file ending in .o depends on the same filename ending in .c to be present.
+# [$<]: it means "include the first prerequisite filename from the target line here"
+# [$@]: (include the target here)
 
 %.o: %.c
 	$(CC) $< -I $(HEADERS) -o $@ 
+
+# Don’t forget to put a .PHONY, in order to avoid relinking. Put all the rules you use.
+.PHONY:	all clean fclean re bonus
