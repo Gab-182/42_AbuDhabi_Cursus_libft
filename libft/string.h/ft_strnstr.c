@@ -1,48 +1,29 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 12:16:52 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/11/01 15:28:02 by gabdoush         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 
-char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	size_t j;
+	size_t	i;
+	size_t	j;
 
-	if (*needle == '\0')
+	i = 0;
+	if (!*needle)
 		return ((char *)haystack);
-	j = 0;
-	while (haystack && len--)
+	while (haystack[i] != '\0' && i < len)
 	{
-		if (*haystack == needle[j])
+		j = 0;
+		while (haystack[i + j] == needle[j] && needle[j] != '\0' && j + i < len)
 		{
-			while (*haystack == needle[j])
-			{
-				haystack++;
-				j++;
-			}
+			j++;
 		}
-		else
+		if (j == strlen(needle))
 		{
-			haystack++;
-			j = 0;
+			return ((char *)&haystack[i]);
 		}
-
-		if (needle[j] == '\0')
-		{
-			return ((char *)(haystack - j));
-		}
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 int    main()
