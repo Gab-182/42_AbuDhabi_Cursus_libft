@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnrcmp.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/02 23:09:00 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/02 23:10:18 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 11:04:09 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 11:04:11 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

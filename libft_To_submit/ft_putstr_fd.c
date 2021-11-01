@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/10 01:50:38 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/10 01:55:19 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 10:53:44 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 10:53:46 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

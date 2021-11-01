@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 20:13:45 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/11 21:15:55 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 10:50:12 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 10:50:14 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_toupper.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 16:46:45 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/03 21:59:45 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 11:05:18 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 11:05:20 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

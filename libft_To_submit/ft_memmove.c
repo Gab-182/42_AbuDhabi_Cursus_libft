@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/04 11:59:40 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/05 14:16:15 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 10:52:48 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 10:52:53 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

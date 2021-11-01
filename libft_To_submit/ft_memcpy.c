@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 22:23:16 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/01 22:23:35 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 10:52:37 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 10:52:40 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

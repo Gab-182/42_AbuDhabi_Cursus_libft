@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 22:07:00 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/01 22:08:05 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 10:46:51 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 10:46:55 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

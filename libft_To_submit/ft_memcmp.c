@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 22:16:29 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/04 23:08:23 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 10:52:28 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 11:43:39 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,16 +25,13 @@ int	ft_memcmp(const void *s1, const void *s2, size_t len)
 	{
 		return (0);
 	}
-	while (n < len)
+	while (len--)
 	{
-		if (s11[n] == s22[n] && s11[n] != '\0' && s22[n] != '\0')
-		{
-			n++;
-		}
-		else
+		if (s11[n] != s22[n])
 		{
 			return (s11[n] - s22[n]);
 		}
+		n++;
 	}
 	return (0);
 }

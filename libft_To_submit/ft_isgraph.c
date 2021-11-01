@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isgraph.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 16:38:27 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/01 16:38:29 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 10:48:27 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 10:48:30 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

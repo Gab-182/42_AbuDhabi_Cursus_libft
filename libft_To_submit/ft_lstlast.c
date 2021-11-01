@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstlast.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 02:27:01 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/11 02:27:28 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 10:51:36 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 10:51:38 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

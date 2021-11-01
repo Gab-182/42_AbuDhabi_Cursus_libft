@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 16:39:21 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/01 16:40:30 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 10:48:47 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 10:48:49 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 

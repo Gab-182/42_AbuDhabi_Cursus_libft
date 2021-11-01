@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 23:25:19 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/09 23:55:55 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/01 11:03:29 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/01 11:03:31 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
