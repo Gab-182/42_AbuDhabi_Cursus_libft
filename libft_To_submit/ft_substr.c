@@ -6,7 +6,7 @@
 /*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:05:00 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/11/01 11:05:02 by gabdoush         ###   ########.fr       */
+/*   Updated: 2021/11/01 20:26:35 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	size_t	i;
 	char	*sub_str;
 
+	if (! s)
+		return (NULL);
 	n = start;
 	i = 0;
 	sub_str = (char *)malloc(len + 1);
