@@ -23,6 +23,9 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
  * this if statement to make sure that :
  * - we dont make (start) bigger than the length of the string(s).
  * - make sure that the length of the substring (sub_str)
+ * 
+ * the uses of strdup() here is for allocate a memory location 
+ * for the NULL character and return it ('\0').
 */
 	if (start > strlen(s) || len <= 0)
 		return (strdup(""));
