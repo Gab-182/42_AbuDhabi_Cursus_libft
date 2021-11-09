@@ -1,27 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 10:50:55 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/11/02 09:50:48 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/09 13:59:50 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/09 13:59:59 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_list	*ft_lstnew(void *content)
+void	*ft_memalloc(size_t size)
 {
-	t_list	*new_list;
+	void	*result;
 
-	new_list = (t_list *)malloc(sizeof(t_list));
-	if (!new_list)
+	result = malloc(size + 1);
+	if (result != NULL)
 	{
-		return (NULL);
+		ft_memset(result, '\0', size);
 	}
-	new_list->content = content;
-	new_list->next = NULL;
-	return (new_list);
+	return (result);
 }

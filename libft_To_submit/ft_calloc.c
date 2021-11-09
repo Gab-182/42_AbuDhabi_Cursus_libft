@@ -5,28 +5,20 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/11/01 10:46:51 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/11/01 10:46:55 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/11/02 09:47:37 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/11/05 18:43:27 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t nmemb, size_t size)
+void	*ft_calloc(size_t count, size_t size)
 {
-	size_t	n;
-	char	*ptr;
+	void	*ptr;
 
-	ptr = (char *)malloc(nmemb * size);
-	n = 0;
-	if (!nmemb || !size || !ptr)
-	{
+	ptr = (void *)malloc(count * size);
+	if (!ptr)
 		return (NULL);
-	}
-	while (n < (nmemb * size))
-	{
-		ptr[n] = 0;
-		n++;
-	}
-	return ((void *)ptr);
+	ft_bzero(ptr, (count * size));
+	return (ptr);
 }
