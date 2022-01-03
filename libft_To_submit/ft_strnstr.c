@@ -6,7 +6,11 @@
 /*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/11/01 11:04:25 by gabdoush          #+#    #+#             */
+<<<<<<< HEAD
 /*   Updated: 2021/12/22 23:59:19 by gabdoush         ###   ########.fr       */
+=======
+/*   Updated: 2021/11/02 09:52:06 by gabdoush         ###   ########.fr       */
+>>>>>>> 990d958b7492d4540a5bc989b864d86905a55dbe
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,9 +40,19 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 	{
 		j = 0;
 		while (haystack[i + j] == needle[j] && needle[j] != '\0' && j + i < len)
+<<<<<<< HEAD
 			j++;
 		if (j == ft_strlen(needle))
 			return ((char *)&haystack[i]);
+=======
+		{
+			j++;
+		}
+		if (j == ft_strlen(needle))
+		{
+			return ((char *)&haystack[i]);
+		}
+>>>>>>> 990d958b7492d4540a5bc989b864d86905a55dbe
 		i++;
 	}
 	return (NULL);

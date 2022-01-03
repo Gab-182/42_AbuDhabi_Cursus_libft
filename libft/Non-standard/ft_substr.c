@@ -12,34 +12,48 @@
 # include <string.h>
 # include <stdlib.h>
 
+/**
+ * the lenghth (len) is starting from 1, not from 0.
+*/
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
-	size_t n;
-	size_t i;
-	char *sub_str;
+	char			*sub_str;
 
-
-	n = start;
-	i = 0;
-	sub_str = (char *)malloc(len + 1);
-
+/***
+ * this if statement to make sure that :
+ * - we dont make (start) bigger than the length of the string(s).
+ * - make sure that the length of the substring (sub_str)
+ * 
+ * the uses of strdup() here is for allocate a memory location 
+ * for the NULL character and return it ('\0').
+*/
+	if (start > strlen(s) || len <= 0)
+		return (strdup(""));
+/**
+ * Here we are checking if the length of (sub_string) will be more 
+ * the length of main string(s), and if so :
+ * - use calloc to allocate a specified amount of memory which is (len +1) 
+ *   and then initialize it to zero.
+*/
+	if ((start + len) > strlen(s))
+	{
+		sub_str = (char *) calloc(strlen(s) - start + 1, sizeof(char));
+		if (!sub_str)
+			return (NULL);
+/**
+ * - then copy the main string (s) from the point (start) to the end of the (s).
+ *     # (s + start)             ----> pointer to the start of (sub_str)
+ *     # (strlen(s) - start + 1) ----> cause the strlcpy() copy to the (size -1).
+ * 
+*/
+		strlcpy(sub_str, s + start, strlen(s) - start + 1);
+		return (sub_str);
+	}
+	sub_str = (char *) calloc(len + 1, sizeof(char));
 	if (!sub_str)
-	{
 		return (NULL);
-	}
-	/*
-	 * I did not wrote (i <= len):
-	 * cause len is the max size of the new string, not the max length,
-	 * so the '\0' will be included.
-	 */
-	while (n < strlen(s) && i < len)
-	{
-		sub_str[i] = ((char *)s)[n];
-		n++;
-		i++;
-	}
-	sub_str[i] = '\0';
-	return sub_str;
+	strlcpy(sub_str, s + start, len + 1);
+	return (sub_str);
 }
 
 int	main()
@@ -47,20 +61,11 @@ int	main()
 	const char *s;
 	char *sub_str;
 
-	s = "ABCDEFGHIJKLMNO";
-	sub_str = ft_substr(s, 7, 6);
+	s = "Ghaiath...Abdoush";
+	sub_str = ft_substr(s, 7, 16);
 
 	printf("%lu\n", strlen(s));
 	printf("%s\n", sub_str);
 
 	return EXIT_SUCCESS;
 }
-
-/*
- * Note:
- * =====
- * do not forget to replace strlen(s1) with ft_strlen(s1), and include the
- * heder for that:
- * # include "libft.h"
- */
-

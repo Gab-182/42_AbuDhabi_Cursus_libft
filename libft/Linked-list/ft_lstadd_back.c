@@ -34,26 +34,21 @@ t_list *ft_lstlast(t_list *lst)
     return (lst);
 }
 /*--------------------------Required function----------------------------*/
-void ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **lst, t_list *new)
 {
-    t_list *last_element;
+	t_list	*last_element;
 
-    if (*lst == NULL)
-    {
-        *lst = new;
-    }
-    last_element = *lst;
-
-    // To make the pointer (last_element)reach the last element of the (lst).
-    while (last_element -> next)
-    {
-        last_element = last_element -> next;
-    }
-    // Put (new) in the position of (next) element after (last_element -> content) 
-    last_element -> next = new;
-    // Then terminate the whole struct with NULL by terminating (new) struct with NULL.
-    new -> next = NULL;
+	if (!new)
+		return ;
+	if (!(*lst))
+	{
+		*lst = new;
+		return ;
+	}
+	last_element = ft_lstlast(*lst);
+	last_element -> next = new;
 }
+
 
 /*------------------------------________----------------------------------*/
 /*-----------------------------|Example|-----------------------------------*/

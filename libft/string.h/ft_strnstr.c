@@ -1,61 +1,45 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/09/21 20:47:00 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/09/21 20:47:02 by gabdoush         ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
-# include <stdio.h>
-# include <stdlib.h>
-# include <string.h>
-
-
-char    *ft_strnstr(const char *haystack, const char *needle, size_t len)
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	if (*needle == '\0')
-	{
-		return (char *)haystack;
-	}
-	size_t i;
-	int j;
-	
-	i = 0;
+	size_t	i;
+	size_t	j;
 
+	i = 0;
+	if (!*needle)
+		return ((char *)haystack);
 	while (haystack[i] != '\0' && i < len)
 	{
 		j = 0;
-		if (haystack[i] == needle[j])
+		while (haystack[i + j] == needle[j] && needle[j] != '\0' && j + i < len)
 		{
-			while (haystack[i] == needle[j] && needle[j] != '\0' && i < len)
-			{
-				i++;
-				j++;
-			}
+			j++;
 		}
-		else
+		if (j == strlen(needle))
 		{
-			i++;
+			return ((char *)&haystack[i]);
 		}
-
-		if (needle[j] == '\0')
-		{
-			return (char *)(haystack + i - j);
-		}
+		i++;
 	}
-	return (0);
+	return (NULL);
 }
 
 int    main()
 {
 	char main_string[] = "Ghaith AntAntiun Ghaith Abdoush";
-	char string[] = "th";
+	char string[] = "GGAbd";
 	size_t len = 15;
 	printf("%s\n", ft_strnstr(main_string, string, len));
-    
+	
+if (strnstr(main_string, string, len) == ft_strnstr(main_string, string, len))
+{
+	printf("%s\n", "TRUE");
+}
+else
+{
+	printf("%s", "FALSE");
+}
 	return EXIT_SUCCESS;
 }

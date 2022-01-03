@@ -6,7 +6,11 @@
 #    By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/11/01 11:05:39 by gabdoush          #+#    #+#              #
+<<<<<<< HEAD
 #    Updated: 2021/12/21 17:35:26 by gabdoush         ###   ########.fr        #
+=======
+#    Updated: 2021/11/03 17:31:50 by gabdoush         ###   ########.fr        #
+>>>>>>> 990d958b7492d4540a5bc989b864d86905a55dbe
 #                                                                              #
 # **************************************************************************** #
 
@@ -83,7 +87,14 @@ fclean: clean
 
 re: fclean all
 
+<<<<<<< HEAD
 #%.o: %.c
 #	$(CC) $< -I $(HEADERS) -o $@ 
 
 .PHONY:	all clean fclean re bonus
+=======
+%.o: %.c
+	$(CC) $< -I $(HEADERS) -o $@ 
+
+.PHONY:	all clean fclean re bonus
+>>>>>>> 990d958b7492d4540a5bc989b864d86905a55dbe
