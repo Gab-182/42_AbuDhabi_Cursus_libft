@@ -3,12 +3,23 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 16:43:06 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/09 21:17:08 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/12/19 19:52:12 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/12/22 12:48:42 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/**
+ * @brief 
+ * ft_itoa(): convert integer to ASCII string
+ * Allocates (with malloc(3)) and returns a string representing the integer
+ * received as an argument, Negative numbers must be handled.
+ * If the allocation fails the function will return NULL.
+ * 
+ * @param (int)
+ * @return char *
+ */
 
 #include "libft.h"
 
@@ -42,6 +53,18 @@ char	*ft_itoa(int n)
 		*(str + 0) = '-';
 	return (str);
 }
+/* 
+ * *(str + 0) ---> To move The pointer to the first memory location 
+ * of the string.
+ * If the integer number is negative, put (-) at the first
+ * memory location (str[0])
+ */
+/****************************************************************/
+/* This function is to get the length of the integer (n)
+ *
+ * (i = 1) : if the (num) < 10.
+ * that mean there is just one number in (num).
+ */
 
 static size_t	ft_intlen(int num)
 {

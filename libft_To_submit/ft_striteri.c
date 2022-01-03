@@ -1,36 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstiter.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/12/19 21:08:39 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/12/22 14:41:26 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/12/22 18:52:52 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/12/22 18:52:53 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /**
- * @file ft_lstiter.c
+ * @file ft_striteri.c
  * @brief 
- * Iterates the list ’lst’ and applies the function ’f’ to the content of 
- * each element.
+ * Applies the function f to each character of the
+ * string passed as argument, and passing its index
+ * as first argument. Each character is passed by
+ * address to f to be modified if necessary
  * 
- * #1. The adress of a pointer to an element. 
- * #2. The adress of the function used to iterate on the list.
- * @param (t_list *lst, void (*f)(void *))
-*/
+ * @param (char *s, void (*f)(unsigned int, char*))
+ */
 
 #include "libft.h"
 
-void	ft_lstiter(t_list *lst, void (*f)(void *))
+void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	if (lst != NULL)
+	unsigned int	i;
+
+	i = 0;
+	if (s != NULL)
 	{
-		while (lst)
+		while (s[i] != '\0')
 		{
-			f(lst -> content);
-			lst = lst -> next;
+			f(i, &s[i]);
+			i++;
 		}
 	}
 }

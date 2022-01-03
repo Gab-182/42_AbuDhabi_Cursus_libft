@@ -3,17 +3,61 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/09 00:40:49 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/09 00:45:11 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/12/20 12:22:23 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/12/23 01:23:12 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/*
+ * ft_split(): split string, with specified character as delimiter, into an 
+ * array of strings.
+ *
+ * DESCRIPTION:
+ * ============
+ * Allocates with malloc() and returns an array of strings obtained by 
+ * splitting ’s’ using the character ’c’ as a delimiter. The array must be
+ * ended by a NULL pointer.
+ *
+ * Split takes up a string and split it in many strings depending on the 
+ * delimiter character. The function returns an array of strings.
+ * 
+ * Notes:
+ * ------
+ * 1) The char c will not be included in the new string.
+ * 
+ * 2) The split process will start from the first item in the string (s)
+ *      and will end when we found the char (c) in the string.
+ *      So, keep in mind to use malloc() just for items that will be copied
+ *      to the new string.
+ * 3) If you did not find the char (c) in the string (s), copy the whole
+ *      string (s) to the new one with allocating the right amount of 
+ *      memory to the new one.
+ */
 
 #include "libft.h"
 
 static size_t	sup_str_len(char const *s, char c);
 static size_t	count_sup_str(char const *s, char c);	
+/*-------------------------------------------------------------------------*/
+	/* 
+	 * [1]
+	 * Alocating memory to (full_str) by multiply the size of char (full_str)
+	 * with the number of the sub_pointer that full_str is pointing to.
+	 * [2]
+	 * adding the (sub_str) to (full_str) by increasing the index (n)
+	 * [3]
+	 * the second while loop is to remove the char (c) from the pointers
+	 * sub_str.
+	 * [4]
+	 * adding the (sub_str) to (full_str) by increasing the index (n)
+	 * If there is no (sub_str) to add to (full_str) at all, return (null)
+	 * cause that mean that the string is eampty, or the string was just
+	 * contain the char (c).
+	 * [5]
+	* Move the pointer (s) location to the next (sub_str)
+	*/
 
 char	**ft_split(char const *s, char c)
 {
@@ -40,8 +84,16 @@ char	**ft_split(char const *s, char c)
 	full_str[n] = NULL;
 	return (full_str);
 }
+/*-------------------------------------------------------------------------*/
+/**
+ * This function is for calculating how many (sub_str) we can devide
+ * the full string (s) using the char (c). 
+ * 
+ * To better understand how this function work use pythontutor.com
+ * to visualize the whole thing.
+ */
 
-static size_t	count_sup_str(char const *s, char c)
+static size_t	count_sup_str(const char *s, char c)
 {
 	size_t		sub_str_num;
 	size_t		is_char_c;
@@ -61,6 +113,8 @@ static size_t	count_sup_str(char const *s, char c)
 	}
 	return (sub_str_num);
 }
+/*-------------------------------------------------------------------------*/
+/* This function is to calculate the length of each (sub_str) */
 
 static size_t	sup_str_len(const char *s, char c)
 {
@@ -74,3 +128,4 @@ static size_t	sup_str_len(const char *s, char c)
 	}
 	return (len);
 }
+/*-------------------------------------------------------------------------*/

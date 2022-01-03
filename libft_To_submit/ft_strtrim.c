@@ -3,12 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/06 19:51:51 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/09 16:55:28 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/12/22 18:55:15 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/12/22 18:59:40 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/**
+ * @brief 
+ * ft_strtrim(): trim beginning and end of string with the specified characters
+ * Allocates (with malloc(3)) and returns a copy of ’s1’ with the characters 
+ * specified in ’set’ removed from the beginning and the end of the string.
+ * 
+ * @param (char const *s1, char const *set)
+ * @return (char *)
+ */
 
 #include "libft.h"
 
@@ -30,6 +40,14 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (ft_substr(s1, start, (end - start)));
 }
 
+/*
+ * check_for_set():
+ * ----------------
+ * To check each character from the string (s) if it is
+ *  found in the set of characters (set).
+ *  if the character is in the set return True (1),
+ *  if not return False (0).
+ */
 static int	check_for_set(char c, char const *set)
 {
 	size_t	i;

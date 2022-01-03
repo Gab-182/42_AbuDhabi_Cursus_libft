@@ -3,12 +3,21 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstsize.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 01:55:17 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/11 01:56:40 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/12/19 22:31:10 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/12/22 14:45:32 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/**
+ * @file ft_lstsize.c
+ * @brief 
+ * Counts the number of elements in a list.
+ * @param (t_list *lst)
+ * @return (int)
+ *
+ */
 
 #include "libft.h"
 

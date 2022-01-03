@@ -3,18 +3,28 @@
 /*                                                        :::      ::::::::   */
 /*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 16:37:26 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/01 16:37:28 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/12/19 19:47:17 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/12/22 12:49:43 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+/**
+ * @brief The isalpha() function tests for any character for which isupper(3)
+ * 		  or islower(3) is true.  The value of the argu-
+ * 		  ment must be representable as an unsigned char or the value of EOF.
+ * 
+ * @param (int) 
+ * @return int 
+ */
+
 int	ft_isalpha(int n)
 {
-	if ((n >= 'a' && n <= 'z') || (n >= 'A' && n <= 'Z'))
-	{
+	unsigned char	i;
+
+	i = (unsigned char)n;
+	if ((i >= 'a' && i <= 'z') || (i >= 'A' && i <= 'Z'))
 		return (1);
-	}
 	return (0);
 }

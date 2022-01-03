@@ -3,12 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/01 20:38:50 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/03 21:27:26 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/12/19 19:24:37 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/12/22 12:45:53 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/**
+ * @brief The atoi() function converts the initial portion of the string pointed 
+ * to by str to int representation.
+ */
 
 #include "libft.h"
 

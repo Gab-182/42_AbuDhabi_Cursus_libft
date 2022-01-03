@@ -3,12 +3,20 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstdelone.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: gabdoush <gabdoush@student.42abudhabi      +#+  +:+       +#+        */
+/*   By: gabdoush <gabdoush@42ABUDHABI.AE>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/10/11 20:13:45 by gabdoush          #+#    #+#             */
-/*   Updated: 2021/10/11 21:15:55 by gabdoush         ###   ########.fr       */
+/*   Created: 2021/12/19 21:23:58 by gabdoush          #+#    #+#             */
+/*   Updated: 2021/12/22 14:41:01 by gabdoush         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+/**
+ * @brief 
+ * Takes as a parameter an element and frees the memory of the element’s content 
+ * using the function ’del’ given as a parameter and free the element.
+ * @param ((t_list *lst, void (*del)(void*)))
+ * 
+*/
 
 #include "libft.h"
 
